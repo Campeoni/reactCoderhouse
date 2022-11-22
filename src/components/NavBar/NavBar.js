@@ -1,17 +1,15 @@
 import React from 'react';
 import CardWidget from '../CardWidget/CardWidget.js';
 import Brand from '../Brand/Brand.js';
-import Links from '../Links/Links.js';
+import ListLinks from '../ListLinks/ListLinks.js';
 
 import './nav-bar.css';
 
-const NavBar = ({ src, alt = '' }) => {
+const NavBar = () => {
   return (
-    <div className="navbar">
-      NavBar
-
+    <div className='navbar'>
       <Brand/>
-      <Links/>
+      <ListLinks/>
       <CardWidget/>
     </div>
   );

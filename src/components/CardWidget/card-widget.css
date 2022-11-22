@@ -1,0 +1,16 @@
+.card-widget{
+    background-color: aqua;
+    padding-right: 10px;
+    border-bottom: 30px;
+}
+
+.bag{    
+    height:40px;
+    width: 40px;
+    padding-top: 10px;
+    margin-bottom: -10px;
+}
+.count{
+    transform: translate(13px,-20px);
+     
+}

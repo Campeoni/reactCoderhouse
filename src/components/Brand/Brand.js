@@ -2,10 +2,10 @@ import React from 'react';
 
 import './brand.css';
 
-const Brand = ({ src, alt = '' }) => {
+const Brand = () => {
   return (
-    <div className="">
-      Brand
+    <div className='brand'>
+      Car Shop
     </div>
   );
 };

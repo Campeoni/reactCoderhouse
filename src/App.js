@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div>
       <NavBar/>
-      <ItemListContainer/>
+      <ItemListContainer mensaje='hola'/>
     </div>
   );
 }
