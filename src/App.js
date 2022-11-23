@@ -10,7 +10,10 @@ export default function App() {
   return (
     <div>
       <NavBar/>
-      <ItemListContainer mensaje='hola'/>
+      <ItemListContainer titulo='Este es el titulo por prop'>        
+        <h2>Este es el sub-tutilo por Children</h2>        
+      </ItemListContainer> 
+      
     </div>
   );
 }

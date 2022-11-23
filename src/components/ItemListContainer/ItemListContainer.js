@@ -2,10 +2,13 @@ import React from 'react';
 
 import './item-list-container.css';
 
-const ItemListContainer = ({mensaje}) => {
+const ItemListContainer = ({titulo, children}) => {
   return (
     <div className='mensaje'>
-      {mensaje}
+      <h1>
+        {titulo}
+      </h1>
+      {children}
     </div>
   );
 };
