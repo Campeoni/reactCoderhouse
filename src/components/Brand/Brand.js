@@ -1,12 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './brand.css';
 
 const Brand = () => {
   return (
-    <div className='brand'>
-      Car Shop
-    </div>
+    <Link className='brand' to="/"> Lisboa </Link>      
   );
 };
 
