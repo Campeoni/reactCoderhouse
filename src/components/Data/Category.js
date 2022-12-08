@@ -9,7 +9,7 @@ const DataCategory = [
     },
     {
         "id": 3,
-        "name": "Shores"        
+        "name": "Shorts"        
     },
     {
         "id": 4,

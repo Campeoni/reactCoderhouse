@@ -13,7 +13,7 @@ const ItemDetailContainer = ({product}) => {
         <div className='cantidad'>{`Disponibilidad: ${product.stock}`}</div>
         
 
-        <p>{`categori: ${product.categoryName}`}</p>
+        <p>{`categoria: ${product.categoryName}`}</p>
 
 
       </div>
