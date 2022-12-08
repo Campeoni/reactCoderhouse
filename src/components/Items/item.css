@@ -1,23 +1,28 @@
 .card{    
     border: solid 1px ;
     width:  250px;
-    height: 250px;    
+    height: 350px;   
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-img {
+.card img {
     width:  150px;
     height: 150px;
 }
 
-.name{
+.card .name{
     font-weight: bold;
 }
 
-.tachado{
+.card .tachado{
     color: red;
     text-decoration:line-through;
 }
 
-.category{
+.card .category{
     color: grey;
 }

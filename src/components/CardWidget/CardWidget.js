@@ -1,6 +1,6 @@
 import React from 'react';
 import './card-widget.css';
-const  bag = "./img/bag.png";
+const  bag = "../img/bag.png";
 
 const CardWidget = () => {
   return (

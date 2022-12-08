@@ -1,7 +1,11 @@
 .container{
-    width: 500px;
+    width: 100vw;
+    margin: 2%;
 }
+
 .cards{
     display: flex;
-    gap: 5px;    
+    flex-wrap: wrap;
+    gap: 7px;   
+    align-items: center; 
 }
