@@ -1,5 +1,7 @@
 import React from 'react';
 import './item-detail-container.css';
+import ItemCount from '../ItemCount/ItemCount.js'
+
 const  image = "../img/";
 
 const ItemDetailContainer = ({product}) => {
@@ -11,7 +13,7 @@ const ItemDetailContainer = ({product}) => {
         <div className={`price ${product.offer && 'tachado'}`}> Precio $ {product.price} </div>   
         {product.offer && <div className='price'> Oferta $ {product.offer} </div> }
         <div className='cantidad'>{`Disponibilidad: ${product.stock}`}</div>
-        
+        <ItemCount stock={product.stock}></ItemCount>
 
         <p>{`categoria: ${product.categoryName}`}</p>
 
