@@ -4,7 +4,7 @@ import dataProductos from '../../components/Data/Productos.js';
 import fetchProducts from '../../components/Data/fetchProducts.js';
 import ItemDetailContainer from '../../components/ItemDetailContainer/ItemDetailContainer.js'
 
-function ItemId() {
+const ItemId = ()=> {
   const {id} = useParams();
   const[product, setProduct] = useState([]);
 
