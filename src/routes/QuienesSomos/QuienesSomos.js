@@ -2,7 +2,7 @@ import React from 'react';
 
 function QienesSomos() {
   return (
-    <div>
+    <div className='container'>
       Quienes somos
     </div>      
   )

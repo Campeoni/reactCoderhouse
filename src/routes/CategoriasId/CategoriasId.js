@@ -46,6 +46,7 @@ function CategoriasId() {
     })    
 
     return ()  =>{}
+    
   }, [id]);
 
   return (

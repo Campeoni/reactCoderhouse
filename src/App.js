@@ -10,20 +10,27 @@ import ItemId from './routes/ItemId/ItemId.js'
 import QuienesSomos from './routes/QuienesSomos/QuienesSomos.js'
 import FAQ from './routes/FAQ/FAQ.js'
 import MiCuenta from './routes/MiCuenta/MiCuenta.js'
+import {CartProviedes} from './context/CartContext.js'
+import Error404 from './routes/Error404/Error404.js'
+import Footer from './components/Footer/Footer.js'
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element= {<Categorias />}/>
-        <Route exact path="/Ofertas" element= {<Ofertas />}/>
-        <Route exact path="/Categorias/:id" element= {<CategoriasId />}/>        
-        <Route exact path="/Item/:id" element= {<ItemId />}/>        
-        <Route exact path="/QuienesSomos" element= {<QuienesSomos />}/>
-        <Route exact path="/FAQ" element= {<FAQ />}/>
-        <Route exact path="/MiCuenta" element= {<MiCuenta />}/>
-      </Routes>
+      <CartProviedes>
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element= {<Categorias />}/>
+          <Route exact path="/Ofertas" element= {<Ofertas />}/>
+          <Route exact path="/Categorias/:id" element= {<CategoriasId />}/>        
+          <Route exact path="/Item/:id" element= {<ItemId />}/>        
+          <Route exact path="/QuienesSomos" element= {<QuienesSomos />}/>
+          <Route exact path="/FAQ" element= {<FAQ />}/>
+          <Route exact path="/MiCuenta" element= {<MiCuenta />}/>
+          <Route path="*" element= {<Error404 />}/>
+        </Routes>
+      </CartProviedes>
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -1,11 +1,13 @@
 import React from 'react';
 
-function FAQ() {
+function Error404() {
   return (
     <div className='container'>
-      FAQ
+      <h1>
+        ERROR 404
+      </h1>
     </div>      
   )
 };
 
-export default FAQ;
+export default Error404;

@@ -2,7 +2,7 @@ import React from 'react';
 
 function MiCuenta() {
   return (
-    <div>
+    <div className='container'>
       Mi Cuenta
     </div>      
   )

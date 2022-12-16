@@ -12,9 +12,8 @@ const ListLinks = () => {
     FetchCategories(DataCategory)          
       .then(res => {setCategorias(res)
       })
-      return ()=>{        
-      }   
 
+      return ()=>{}   
   }, []);
 
 

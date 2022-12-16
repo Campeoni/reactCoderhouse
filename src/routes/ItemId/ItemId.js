@@ -26,12 +26,11 @@ const ItemId = ()=> {
       setProduct(item[0])          
     })        
 
-
     return ()  =>{}
   }, [id]);
 
   return (
-    <div>               
+    <div className='container'>               
       <ItemDetailContainer product={product} />  
     </div>     
   )

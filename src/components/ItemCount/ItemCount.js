@@ -1,26 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React  from 'react';
 import './item-count.css';
 
-const ItemCount = ({stock}) => {
-  const [counter, setCounter] = useState(1);
-  
-  const decrementarStock = ()=>{
-    if (counter > 1 ) {
-      setCounter(counter-1);
-    }
-    
-  }
-
-  const incrementarStock = ()=>{   
-    if ( counter < stock ) 
-      setCounter(counter+1);    
-  }
-
+const ItemCount = ({stock, restar, sumar}) => {
   return (
     <div className='itemCounter'>
-      <button onClick={decrementarStock} > - </button>
-      <div> {counter} </div>
-      <button onClick={incrementarStock}> + </button>
+      <button onClick={restar} > - </button>
+      <div> {stock} </div>
+      <button onClick={sumar}> + </button>
     </div>  
   );
 };

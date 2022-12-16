@@ -23,8 +23,7 @@ function Ofertas() {
       setProducts(filtroProducts)
     })    
 
-
-    return ()  =>{}
+    return ()  =>{}    
   }, []);
 
   return (
