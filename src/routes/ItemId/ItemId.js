@@ -19,9 +19,7 @@ const ItemId = ()=> {
     
     readProducts().then(data => {
       const item = data.filter((element)=>{
-        if (element.id == id) {                 
-          return true
-        } 
+        return element.id === parseInt(id,10) && true        
       })          
       setProduct(item[0])          
     })        

@@ -29,7 +29,7 @@ function CategoriasId() {
     }    
     readProducts().then(data => {
       const filtroProducts = data.filter((element)=>{
-        return id == 0 ? true : element.category == id
+        return parseInt(id,10) === 0 ? true : element.category === parseInt(id,10)
       })      
       setProducts(filtroProducts)
     })    
@@ -37,9 +37,7 @@ function CategoriasId() {
     readCategorys().then(data => {      
       
       const filtroCategories = data.filter((element)=>{
-        if (id == element.id){
-          return true
-        }        
+        return parseInt(id,10) === element.id && true 
       })      
       
       setCategory(filtroCategories[0])
