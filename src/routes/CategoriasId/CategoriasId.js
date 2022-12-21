@@ -11,8 +11,11 @@ function CategoriasId() {
 
   const[products, setProducts] = useState([]);
   const[category, setCategory] = useState([]);
+  const [productLoading, setproductLoading] = useState();
 
-  useEffect(()=>{ 
+  useEffect(()=>{     
+    setproductLoading(true)
+
     const readProducts = async()=>{
       try{
         return await fetchProducts(dataProductos);              
@@ -20,6 +23,7 @@ function CategoriasId() {
         console.log(error)
       }
     }     
+
     const readCategorys = async()=>{
       try{
         return await fetchCategorias(dataCategorias);              
@@ -27,11 +31,13 @@ function CategoriasId() {
         console.log(error)
       }
     }    
+
     readProducts().then(data => {
-      const filtroProducts = data.filter((element)=>{
+      const filtroProducts = data.filter((element)=>{        
         return parseInt(id,10) === 0 ? true : element.category === parseInt(id,10)
       })      
-      setProducts(filtroProducts)
+      setproductLoading(false);
+      setProducts(filtroProducts);
     })    
 
     readCategorys().then(data => {      
@@ -43,13 +49,14 @@ function CategoriasId() {
       setCategory(filtroCategories[0])
     })    
 
-    return ()  =>{}
+    return ()  =>{            
+    }
     
   }, [id]);
 
   return (
     <div>      
-      <ItemListContainer products={products} categoria={category} />  
+      <ItemListContainer products={products} categoria={category} loading={productLoading} />  
     </div>     
   )
 };

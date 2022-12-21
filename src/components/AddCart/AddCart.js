@@ -6,7 +6,7 @@ const AddCart = ({producto,stock}) => {
   const {addItem} = useCartContext();
 
   const onAdd = ()=>{      
-      addItem(producto,stock);      
+      addItem(producto,stock);            
     }
       
 

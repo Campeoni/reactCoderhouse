@@ -5,6 +5,8 @@ import ItemListContainer from '../../components/ItemListContainer/ItemListContai
 
 function Categorias() {
   const [products, setProducts] = useState([]);
+  const [productLoading, setproductLoading] = useState(true);
+  
   useEffect(()=>{ 
     const readProducts = async()=>{
       try{
@@ -14,14 +16,17 @@ function Categorias() {
       }
     } 
     
-    readProducts().then(data => {setProducts(data)})
+    readProducts().then(data => {
+      setProducts(data);
+      setproductLoading(!productLoading);
+    })
     
     return ()  =>{}
   }, []);
 
   return (
     <div>
-      <ItemListContainer products={products} categoria={{"id":0,"name":"Productos"}} />                
+      <ItemListContainer products={products} categoria={{"id":0,"name":"Productos"}} loading={productLoading} />                
     </div>      
   )
 };

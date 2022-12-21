@@ -14,7 +14,8 @@ const CartProviedes = ({children}) => {
         }))
       } else {
         setCartItem([...cartItem, {...item, cantidad}])
-      }        
+      }       
+      console.log("El carrito tiene= ", cartItem); 
     };
 
     const removeItem = (id) => {

@@ -6,6 +6,7 @@ import ItemListContainer from '../../components/ItemListContainer/ItemListContai
 function Ofertas() {  
 
   const[products, setProducts] = useState([]); 
+  const [productLoading, setproductLoading] = useState(true);
 
   useEffect(()=>{ 
     const readProducts = async()=>{
@@ -17,18 +18,19 @@ function Ofertas() {
     }      
     readProducts().then(data => {
       const filtroProducts = data.filter((element)=>{
-        return element.offer ? true : false
-        
+        return element.offer ? true : false        
       })      
-      setProducts(filtroProducts)
+      setProducts(filtroProducts);
+      setproductLoading(!productLoading);
     })    
+    
 
     return ()  =>{}    
   }, []);
 
   return (
     <div>      
-      <ItemListContainer products={products} categoria={{"id":0,"name":"Ofertas"}} />  
+      <ItemListContainer products={products} categoria={{"id":0,"name":"Ofertas"}} loading={productLoading} />  
     </div>     
   )
 };
