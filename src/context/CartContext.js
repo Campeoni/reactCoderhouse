@@ -10,7 +10,19 @@ const CartProviedes = ({children}) => {
     const addItem = (item, cantidad) => {
       if (isInCart(item.id)){
         setCartItem(cartItem.map(element =>{
-          return element.id === item.id ? { ...element, cantidad: element.cantidad + cantidad} : element
+          /* return element.id === item.id ? { ...element, cantidad: element.cantidad + cantidad} : element */
+          if (element.id === item.id){
+            if (item.stock >= (element.cantidad + cantidad)){
+              console.log("ingrese acumule por ser <=");
+              return {...element, cantidad: element.cantidad + cantidad} 
+            } else {
+              console.log("ingrese a no hacer nada por ser >");
+              return element;
+            }
+          } else {            
+            return element; 
+          }
+
         }))
       } else {
         setCartItem([...cartItem, {...item, cantidad}])
