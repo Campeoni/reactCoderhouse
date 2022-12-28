@@ -1,6 +1,5 @@
 import React, {useState, useEffect } from 'react';
-import dataProductos from '../../components/Data/Productos.js';
-import fetchProducts from '../../components/Data/fetchProducts.js';
+import  {getFirestore, collection, getDocs} from 'firebase/firestore';
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer.js'
 
 function Ofertas() {  
@@ -9,21 +8,20 @@ function Ofertas() {
   const [productLoading, setproductLoading] = useState(true);
 
   useEffect(()=>{ 
-    const readProducts = async()=>{
-      try{
-        return await fetchProducts(dataProductos);              
-      } catch (error) {
-        console.log(error)
-      }
-    }      
-    readProducts().then(data => {
-      const filtroProducts = data.filter((element)=>{
-        return element.offer ? true : false        
-      })      
-      setProducts(filtroProducts);
+    const db = getFirestore();
+    const itemsCollection = collection(db, 'item');
+
+    getDocs(itemsCollection).then((snapshot)=> {
+      const products = snapshot.docs.map((doc)=> ({
+        id: doc.id,
+        ...doc.data(),
+      })).filter((item)=>{
+        return item.offer ? true : false
+      });
+
+      setProducts(products);
       setproductLoading(!productLoading);
-    })    
-    
+    });
 
     return ()  =>{}    
   }, []);

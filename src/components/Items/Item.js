@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './item.css';
-const  image = "../img/";
 
 const Item = ({item}) => {  
   const url = `/Item/${item.id}`;
@@ -10,7 +9,7 @@ const Item = ({item}) => {
     <div className='card'>      
 
       <Link to={url}>
-        <img src= {`${image}${item.id}.webp`} alt={item.name}></img>
+        <img src= {item.imagen} alt={item.name}></img>
       </Link>  
       <div className='name'> {item.name} </div>
       <div className='category'> {item.categoryName} </div>

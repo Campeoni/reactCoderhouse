@@ -1,7 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import dataProductos from '../../components/Data/Productos.js';
-import fetchProducts from '../../components/Data/fetchProducts.js';
+import  {getFirestore, collection, getDocs} from 'firebase/firestore';
 import dataCategorias from '../../components/Data/Category.js';
 import fetchCategorias from '../../components/Data/fetchCategories.js';
 import ItemListContainer from '../../components/ItemListContainer/ItemListContainer.js'
@@ -16,13 +15,19 @@ function CategoriasId() {
   useEffect(()=>{     
     setproductLoading(true)
 
-    const readProducts = async()=>{
-      try{
-        return await fetchProducts(dataProductos);              
-      } catch (error) {
-        console.log(error)
-      }
-    }     
+      const db = getFirestore();
+      const itemsCollection = collection(db, 'item');
+  
+      getDocs(itemsCollection).then((snapshot)=> {
+        const products = snapshot.docs.map((doc)=> ({
+          id: doc.id,
+          ...doc.data(),
+        })).filter((element)=>{
+          return parseInt(id,10) === 0 ? true : element.category === parseInt(id,10) 
+        });
+      setproductLoading(false);
+      setProducts(products);
+    })    
 
     const readCategorys = async()=>{
       try{
@@ -31,19 +36,10 @@ function CategoriasId() {
         console.log(error)
       }
     }    
-
-    readProducts().then(data => {
-      const filtroProducts = data.filter((element)=>{        
-        return parseInt(id,10) === 0 ? true : element.category === parseInt(id,10)
-      })      
-      setproductLoading(false);
-      setProducts(filtroProducts);
-    })    
-
     readCategorys().then(data => {      
       
       const filtroCategories = data.filter((element)=>{
-        return parseInt(id,10) === element.id && true 
+        return parseInt(id,10) === element.id
       })      
       
       setCategory(filtroCategories[0])
