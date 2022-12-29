@@ -22,7 +22,7 @@ const ItemDetailContainer = ({product}) => {
 
   return (
     <div className='contenedorDetail'>                  
-      <img src= {`${image}${product.id}.webp`} alt={product.name}></img>
+      <img src= {product.imagen} alt={product.name}></img>
       <div className='detail'>
         <div className='name'>{product.name}</div>
         <div className={`price ${product.offer && 'tachado'}`}> Precio $ {product.price} </div>   

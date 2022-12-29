@@ -1,7 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import dataProductos from '../../components/Data/Productos.js';
-import fetchProducts from '../../components/Data/fetchProducts.js';
+import  {getFirestore, collection, getDocs} from 'firebase/firestore';
 import ItemDetailContainer from '../../components/ItemDetailContainer/ItemDetailContainer.js'
 
 const ItemId = ()=> {
@@ -9,18 +8,17 @@ const ItemId = ()=> {
   const[product, setProduct] = useState([]);
 
   useEffect(()=>{ 
-    const readProducts = async()=>{
-      try{
-        return await fetchProducts(dataProductos);              
-      } catch (error) {
-        console.log(error)
-      }
-    }     
-    
-    readProducts().then(data => {
-      const item = data.filter((element)=>{
-        return element.id === parseInt(id,10) && true        
-      })          
+    const db = getFirestore();
+    const itemsCollection = collection(db, 'item');
+  
+    getDocs(itemsCollection).then((snapshot)=> {
+      const item = snapshot.docs.map((doc)=> ({
+        id: doc.id,
+        ...doc.data(),
+      })).filter((element)=>{        
+        return element.id === id
+      });
+
       setProduct(item[0])          
     })        
 
