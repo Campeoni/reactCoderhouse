@@ -1,0 +1,13 @@
+.pagoContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.pagoTitulo{
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bolder;
+}

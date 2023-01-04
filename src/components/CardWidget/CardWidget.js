@@ -1,15 +1,19 @@
 import React from 'react';
 import {useCartContext} from '../../context/CartContext.js'
+import { Link } from 'react-router-dom';
 import './card-widget.css';
 const  bag = "../img/bag.png";
 
 const CardWidget = () => {
   const {cartItem} = useCartContext();
+  const url = "/Order";
   
   return (
     <div className='card-widget'>
-      <img className='bag' src={bag} alt='bag' />
-      <div className='count'>{cartItem.length}</div> 
+      <Link to={url}>
+        <img className='bag' src={bag} alt='bag' />
+        <div className='count'>{cartItem.length}</div> 
+      </Link>
     </div>
   );
 };

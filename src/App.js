@@ -10,6 +10,9 @@ import ItemId from './routes/ItemId/ItemId.js'
 import QuienesSomos from './routes/QuienesSomos/QuienesSomos.js'
 import FAQ from './routes/FAQ/FAQ.js'
 import MiCuenta from './routes/MiCuenta/MiCuenta.js'
+import Order from './routes/Order/Order.js'
+import FinalizarCompra from './routes/FinalizarCompra/FinalizarCompra.js'
+import ProcesandoPago from './routes/ProcesandoPago/ProcesandoPago.js'
 import {CartProviedes} from './context/CartContext.js'
 import Error404 from './routes/Error404/Error404.js'
 import Footer from './components/Footer/Footer.js'
@@ -27,6 +30,9 @@ function App() {
           <Route exact path="/QuienesSomos" element= {<QuienesSomos />}/>
           <Route exact path="/FAQ" element= {<FAQ />}/>
           <Route exact path="/MiCuenta" element= {<MiCuenta />}/>
+          <Route exact path="/Order" element= {<Order />}/>
+          <Route exact path="/FinalizarCompra" element= {<FinalizarCompra />}/>
+          <Route exact path="/ProcesandoPago" element= {<ProcesandoPago />}/>
           <Route path="*" element= {<Error404 />}/>
         </Routes>
       </CartProviedes>

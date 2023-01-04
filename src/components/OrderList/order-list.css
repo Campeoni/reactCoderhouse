@@ -1,0 +1,62 @@
+.orderContainrar{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    min-height: 79vh;
+
+}
+.botonEliminar{
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: red;
+    color: white;
+}
+
+.orderTitulos{
+    font-weight: bold;
+    margin-bottom: 20PX;
+}
+
+.orderTitulos, .orderItems{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;   
+    align-items: center; 
+    justify-content: space-evenly;
+}
+
+.orderItems img{
+    height: 70px;
+    width:  70px;
+
+}
+
+.orderItems .itemCounter button{
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.orderNothing{
+    display: flex;
+    justify-content: center;
+}
+
+.orderfinalizar {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    
+}
+.orderfinalizar button{
+    width: 250px;    
+    height: 65px;    
+    font-size: xx-large;
+    border-radius: 7px;
+    border-color: white;
+    border-width: 2px;
+    background-color: #3197d6;
+    color: white;
+}

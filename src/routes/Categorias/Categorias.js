@@ -16,7 +16,7 @@ function Categorias() {
         id: doc.id,
         ...doc.data(),
       }));
-
+      
       setProducts(products);
       setproductLoading(!productLoading);
     });

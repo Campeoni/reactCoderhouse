@@ -58,3 +58,8 @@ function CategoriasId() {
 };
 
 export default CategoriasId;
+
+
+const parts = ['shoulders', 'knees'];
+const lyrics = ['head', ...parts, 'and', 'toes'];
+//  ["head", "shoulders", "knees", "and", "toes"]

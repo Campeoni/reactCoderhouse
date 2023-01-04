@@ -21,9 +21,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-
-
-
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
