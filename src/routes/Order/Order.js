@@ -1,6 +1,6 @@
 import React from 'react';
 import {useCartContext} from '../../context/CartContext.js'
-import OrderList from '../../components/OrderList/OrderList';
+import OrderList from '../../components/OrderList/OrderList.js';
 
 
 function Order() {  

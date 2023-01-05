@@ -3,7 +3,7 @@ import Pago from '../../components/Pago/Pago';
 
 
 
-function FinalizarCompra() {   
+function Checkout() {   
 
   return (
     <>
@@ -12,4 +12,4 @@ function FinalizarCompra() {
   )  
 };
 
-export default FinalizarCompra;
+export default Checkout;

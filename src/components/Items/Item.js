@@ -13,8 +13,8 @@ const Item = ({item}) => {
       </Link>  
       <div className='name'> {item.name} </div>
       <div className='category'> {item.categoryName} </div>
-      <div className={`price ${item.offer && 'tachado'}`}> Precio $ {item.price} </div>   
-      {item.offer && <div className='price'> Oferta $ {item.offer} </div> }  
+      <div className={`price ${item.offer && 'tachado'}`}> Precio $ {(item.price).toFixed(2)} </div>   
+      {item.offer && <div className='price'> Oferta $ {(item.offer).toFixed(2)} </div> }  
       
     </div>
   )

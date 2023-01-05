@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './order-list.css';
 
 function OrderList({products, restaStock, sumaStock, removeItem}) { 
-  const url = "/FinalizarCompra";
+  const url = "/Checkout";
 
   return (
     <div className="orderContainrar">
@@ -28,17 +28,15 @@ function OrderList({products, restaStock, sumaStock, removeItem}) {
           Sub Total
         </div>
       </div>  
-    
-      
+          
       {products.length > 0 
         ?
         <div className='orderDatos'> 
           <div className='orderContenido' > 
             {products.map((element)=>{
               return (
-                <div key={element.id}>
-                  <OrderDetail product={element} restaStock={restaStock} sumaStock={sumaStock} removeItem={removeItem}/> 
-                </div>
+                <OrderDetail key={element.id} product={element} restaStock={restaStock} sumaStock={sumaStock} removeItem={removeItem} /> 
+                
               )
             })}
           </div>

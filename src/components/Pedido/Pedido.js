@@ -1,5 +1,6 @@
 import React  from 'react';
 import {useCartContext} from '../../context/CartContext'
+import PedidoDetail from '../PedidoDetail/PedidoDetail.js'
 import './pedido.css';
 
 
@@ -23,23 +24,16 @@ function Pedido() {
       </div>
       
       {cartItem.map((item)=>{          
-        return (
-          <div className='itemsPedidoContainer'>
-            <div className='itemName'>
-              {item.name}  X {item.cantidad}
-            </div>            
-            <div className='itemSubtotal'>
-              {item.price * item.cantidad}
-            </div>            
-          </div>  
+        return (          
+          <PedidoDetail key={item.id} item={item} /> 
         )        
       }
       )}
       
       <div className='total'>
         {`Total= ${cartItem.reduce((total, element)=>{
-          return total + (element.price * element.cantidad)
-        },0)}`}
+          return total + ((element.offer ||element.price) * element.cantidad)
+        },0).toFixed(2)}`}
       </div>
           
       

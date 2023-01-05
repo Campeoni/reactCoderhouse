@@ -17,9 +17,8 @@ const ItemList = ({ items, titulo, loading }) => {
           <div className='cards'> 
             {items?.map((element)=> {
               return (
-                <div key={element.id}> 
-                  <Item item={element} />
-                </div>
+                <Item key={element.id} item={element}/>
+              
               )  
             })}
           </div>}

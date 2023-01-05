@@ -1,5 +1,5 @@
 import React from 'react';
-import {useCartContext} from '../../context/CartContext.js'
+import {useCartContext} from '../../context/CartContext.js';
 import { Link } from 'react-router-dom';
 import './card-widget.css';
 const  bag = "../img/bag.png";

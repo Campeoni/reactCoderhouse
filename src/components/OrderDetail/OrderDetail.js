@@ -31,11 +31,11 @@ function OrderDetail({product, restaStock, sumaStock, removeItem }) {
         {product.name}
       </div>
       <div>
-        {product.price}
+        {product.offer || product.price}
       </div>
       <ItemCount stock={product.cantidad} restar={onResta} sumar={onSuma}/>
       <div>
-        { (product.price * product.cantidad).toFixed(2)}
+        { (product.offer || product.price) * product.cantidad}
       </div>
     </div>     
   )  

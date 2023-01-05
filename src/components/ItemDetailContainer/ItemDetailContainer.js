@@ -3,9 +3,6 @@ import './item-detail-container.css';
 import ItemCount from '../ItemCount/ItemCount.js'
 import AddCart from '../AddCart/AddCart.js'
 
-
-const  image = "../img/";
-
 const ItemDetailContainer = ({product}) => {
   const [counter, setCounter] = useState(1);
   
