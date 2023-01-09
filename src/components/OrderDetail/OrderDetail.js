@@ -20,21 +20,33 @@ function OrderDetail({product, restaStock, sumaStock, removeItem }) {
   }
 
   return (
-    <div className="orderItems">            
-      <button onClick={onRemove} className='botonEliminar'>
-        X
-      </button>
-      <div>        
+    <div className="orderRow">            
+      
+      <div className='column1'>
+        <button onClick={onRemove} className='botonEliminar'>
+          <div className='centrado'>
+            X
+          </div>
+        </button>
+      </div>
+
+      <div className='column2'>        
         <img src={product.imagen} alt={product.name}/> 
       </div>
-      <div>
+
+      <div className='column3'>
         {product.name}
       </div>
-      <div>
+
+      <div className='column4'>
         {product.offer || product.price}
       </div>
-      <ItemCount stock={product.cantidad} restar={onResta} sumar={onSuma}/>
-      <div>
+
+      <div className='column5'>
+        <ItemCount stock={product.cantidad} restar={onResta} sumar={onSuma}/>
+      </div>
+      
+      <div className='column6'>
         { (product.offer || product.price) * product.cantidad}
       </div>
     </div>     

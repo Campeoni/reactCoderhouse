@@ -1,11 +1,3 @@
-.orderContainrar{
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-    min-height: 79vh;
-
-}
 .botonEliminar{
     border-radius: 10px;
     border-width: 1px;
@@ -13,29 +5,19 @@
     color: white;
 }
 
-.orderTitulos{
-    font-weight: bold;
-    margin-bottom: 20PX;
-}
-
-.orderTitulos, .orderItems{
-    width: auto;
+.centrado{
     display: flex;
-    flex-direction: row;
-    gap: 7px;   
-    align-items: center; 
-    justify-content: space-evenly;
+    flex-direction: column;    
+    align-items: center;
 }
 
-.orderItems img{
-    height: 70px;
-    width:  70px;
-
+.orderRow img{
+    height: 100px;
+    width:  100px;
 }
 
-.orderItems .itemCounter button{
+.orderRow button{
     width: 20px;
     margin-left: 5px;
     margin-right: 5px;
 }
-

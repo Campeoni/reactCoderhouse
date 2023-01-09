@@ -1,47 +1,66 @@
-.orderContainrar{
+.orderConteiner{
     width: auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-left: 20px;
-    min-height: 79vh;
-
-}
-.botonEliminar{
-    border-radius: 10px;
-    border-width: 1px;
-    background-color: red;
-    color: white;
+    min-height: 80vh;
 }
 
-.orderTitulos{
-    font-weight: bold;
-    margin-bottom: 20PX;
-}
 
-.orderTitulos, .orderItems{
-    width: auto;
+.orderRow{
     display: flex;
     flex-direction: row;
     gap: 7px;   
     align-items: center; 
     justify-content: space-evenly;
+    width: 80vw;
+    margin-bottom: 5px;
 }
 
-.orderItems img{
-    height: 70px;
-    width:  70px;
-
-}
-
-.orderItems .itemCounter button{
-    width: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
-.orderNothing{
+.orderRow .column1{
     display: flex;
-    justify-content: center;
+    flex-direction: column;    
+    align-items: center;    
+    flex-basis: 10%;
+}
+
+.orderRow .column2{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    flex-basis: 15%;
+}
+
+.orderRow .column3{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    flex-basis: 40%;
+    font-size: large;
+}
+
+.orderRow .column4{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    flex-basis: 12%;
+    font-size: large;
+}
+
+.orderRow .column5{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    flex-basis: 10%;
+}
+
+.orderRow .column6{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    flex-basis: 12%;
+    font-size: large;
 }
 
 .orderfinalizar {
@@ -50,6 +69,7 @@
     margin-top: 50px;
     
 }
+
 .orderfinalizar button{
     width: 250px;    
     height: 65px;    
@@ -59,4 +79,19 @@
     border-width: 2px;
     background-color: #3197d6;
     color: white;
+}
+
+.orderRow .orderTitulos{
+    font-weight:bold ;    
+    font-size: xx-large;
+    margin-top: 15px;
+}
+
+.orderNoitems{
+    display: flex;
+    justify-content: center;
+    margin-top: 30%;
+    font-size: x-large;
+    font-weight: bold ;
+    
 }

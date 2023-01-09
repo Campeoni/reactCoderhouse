@@ -7,24 +7,24 @@ function OrderList({products, restaStock, sumaStock, removeItem}) {
   const url = "/Checkout";
 
   return (
-    <div className="orderContainrar">
-      <div className='orderTitulos'>
-        <div className="orderEliminar">
+    <div className="orderConteiner">
+      <div className='orderRow'>
+        <div className="column1 orderTitulos">
           x          
         </div>
-        <div className="orderImagen">
+        <div className="column2 orderTitulos">
           Imagen
         </div>
-        <div className="orderProducto">
+        <div className="column3 orderTitulos">
           Producto
         </div>
-        <div className="orderPrecio">
+        <div className="column4 orderTitulos">
           Precio
         </div>
-        <div className="orderCantidad">
+        <div className="column5 orderTitulos">
           Cantidad
         </div>
-        <div className="orderTotal">
+        <div className="column6 orderTitulos">
           Sub Total
         </div>
       </div>  
@@ -48,7 +48,8 @@ function OrderList({products, restaStock, sumaStock, removeItem}) {
             </Link>
           </div>
         </div>
-        : <div className='orderNothing'> No hay ningun producto en tu carrito </div>          
+        :  <div className='orderNoitems'> No hay ningun producto en tu carrito </div>          
+         
       }
         
     </div>
