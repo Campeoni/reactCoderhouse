@@ -60,9 +60,9 @@ El mismo permite seleccionar como base 1 y no permite que sea menor a esa cantid
 ### b. Agregar al carrito
 Con este botón podremos agregar al carrito este artículo con la cantidad seleccionada. Es importante saber que si el artículo ya está en el carrito al presionar el botón actualizaremos el artículo con la cantidad seleccionada.
 ## 5. CardWidget 
-Presionando en el carrito o en la URL "http://localhost:3000/Order". Nos mostrará un detalle del carrito. En caso de no tener ningún artículo, mostrará un mensaje informando que no existe ningún producto.
- 
-Si tiene artículos veremos cada uno separados en filas con las siguientes columnas:
+Presionando en el carrito. Nos mostrará un detalle del carrito. 
+- En caso de no tener ningún artículo, mostrará un mensaje informando que no existe ningún producto.
+- Si tiene artículos veremos cada uno separados en filas con las siguientes columnas:
 
 
 
