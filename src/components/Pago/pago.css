@@ -38,3 +38,10 @@
     background-color: #3197d6;
     color: white;
 }
+
+.noItemsPago{
+    display: flex;    
+    justify-content: center;
+    font-weight: bold;
+    font-size: x-large;
+}

@@ -10,7 +10,7 @@ const DetalleFactura = ({form, changeHandler}) => {
   return (  
     <div className='containerDetalleFactura'>        
       <div className='titulo'>
-      Detalle de facturacion
+      Detalle de facturación
       </div>
       <div className='formulario'>           
         <form>
